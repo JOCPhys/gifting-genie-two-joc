@@ -2,11 +2,11 @@
 
 
 {% block content %}
-<div class="app-container mt-5">
+<div class="app-container mt-5" style="max-width: 1200px; width: 100%; margin: 0 auto;"> <!-- Set a max-width and center the container -->
     <h1 class="main-title-text mb-3">My Planner</h1>
     <div id="calendar"></div>
     <a href="{% url 'planner:add_event' %}" class="btn btn-log mb-4">Add Event</a>
-    <div class="scrollable-container" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="scrollable-container" style="border: 1px solid #ccc; padding: 10px; width: 100%;">
         <ul class="list-group">
             {% for event in events %}
             <li class="list-group-item">
