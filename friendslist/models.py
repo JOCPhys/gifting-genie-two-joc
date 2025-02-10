@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 
@@ -25,6 +26,8 @@ class Friendship(models.Model):
         return f"{self.user.username} is friends with {self.friend.username}"
 
     def save(self, *args, **kwargs):
+        if self.user == self.friend:
+            raise ValidationError("A user cannot be friends with themselves.")
         super().save(*args, **kwargs)
         if self.confirmed:
             reciprocal, created = Friendship.objects.get_or_create(
