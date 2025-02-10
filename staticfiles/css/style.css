@@ -65,18 +65,18 @@
     color: var(--bs-white);
 }
 
-[data-theme="light"] .title-text{
+[data-theme="light"] .title-text {
     color: var(--bs-black);
 }
-[data-theme="dark"] .title-text{
+[data-theme="dark"] .title-text {
     color: var(--bs-black);
 }
 
-[data-theme="light"] .main-title-text{
+[data-theme="light"] .main-title-text {
     font-family: "Pacifico", serif;
     color: var(--bs-primary);
 }
-[data-theme="dark"] .main-title-text{
+[data-theme="dark"] .main-title-text {
     font-family: "Pacifico", serif;
     color: var(--bs-primary);
 }
